@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>lista libro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <!--tabla donde se cargara los libros ya guardados-->
+            <table border="1">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Titulo</th>
+                    <th>Ejemplares</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                </tr>    
+            </thead> 
+            <tbody th:each="libro : ${libros}">
+                <tr>
+                    <th th:text="${libro.isbn}"></th>
+                    <td th:text="${libro.titulo}"></td>
+                    <td th:text="${libro.ejemplares}"></td>
+                    <td th:text="${libro.autor.nombre}"></td>
+                    <td th:text="${libro.editorial.nombre}"></td>
+                </tr>
+                
+            </tbody>
+            </table>
+        </div>
+    </body>
+</html>

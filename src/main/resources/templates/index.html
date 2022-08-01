@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Estamos en el index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            li{list-style: none;margin-left:70px; padding: 23px 0;float: left;margin: none}
+            nav{background: gray}
+            ul{float: right}
+        </style>
+
+    </head>
+    <body>
+        <!--<img src="../static/imagen/main.jpg" alt="home" width="50" height="50"
+         th:src="@{imagen/main.jpg}"/>-->
+        <nav>
+            <ul>
+                <li><a th:href="@{/registrar}">REGISTRATE</a></li>
+                <li><a th:href="@{/login}">INGRESAR</a></li> 
+            </ul>
+             
+        </nav>
+        <br>
+        <main style="text-align: center">
+            <h1 >Bilioteca Egg</h1>
+            <h2>Encontra todos los libros aqui</h2>
+        </main>
+
+
+
+    </body>
+</html>

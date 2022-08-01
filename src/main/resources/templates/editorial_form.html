@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Carga editorial</title>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h2>Cargar la Editorial Aqui</h2>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <form action="/editorial/registro" method="POST"><!--en action la url q te envia ddeespues del botton con peticion post-->
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre de la Editorial"><!--nombre es la variable en la q va a viajar la info del input -->
+                </div>
+
+                <div class="text-center container">
+                    <button type="submit" class="btn btn-primary"> Subir </button> <!--cuando alguien toqie el boton submit se va a disparar una accion-->
+                </div>
+                <!--se dispara  la servidor y se va ejecutar atravez de una url que se ubica en form action=""-->
+
+                <section class="text-center container">
+                    <div class="row mb-3">
+                        <div class="divVolver">
+                            <a th:href="@{/admin/dashboard}" class="btn btn-secondary my-2 botonVolver botones">Volver</a>
+                        </div> 
+                    </div>
+
+                </section>
+                <!--thymeleaf-->
+                
+                <!--fin thymeleaf-->
+
+            </form>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    </body>
+</html>
